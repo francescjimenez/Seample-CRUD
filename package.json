@@ -1,0 +1,63 @@
+{
+  "name": "order_explorer",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "prop-types": "^15.7.2",
+    "react": "16.8.6",
+    "react-bootstrap": "1.0.0-beta.8",
+    "react-bootstrap-table": "4.3.1",
+    "react-dom": "16.8.6",
+    "react-router-dom": "5.0.0",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "lint": "npm run lint:js",
+    "lint:css": "stylelint './app/**/*.js'",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts --fix",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:staged": "lint-staged"
+  },
+  "pre-commit": "lint:staged",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "1.13.2",
+    "enzyme-to-json": "3.3.5",
+    "eslint": "5.16.0",
+    "eslint-plugin-react": "7.13.0",
+    "husky": "^2.3.0",
+    "lint-staged": "8.1.7",
+    "pre-commit": "1.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
