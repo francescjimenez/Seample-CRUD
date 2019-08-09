@@ -56,7 +56,6 @@ FieldInput.defaultProps = {
 };
 
 FieldInput.propTypes = {
-    line: PropTypes.object.isRequired,
     handleChange: PropTypes.func.isRequired,
     submitting: PropTypes.bool,
 };
