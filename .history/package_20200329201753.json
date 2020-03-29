@@ -61,8 +61,21 @@
     "enzyme-to-json": "3.4.4",
     "eslint": "6.8.0",
     "eslint-plugin-react": "7.19.0",
+    "husky": "4.2.3",
+    "lint-staged": "10.0.9",
     "pre-commit": "1.2.2",
     "react-app-rewired": "2.1.5",
     "nodemon": "2.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

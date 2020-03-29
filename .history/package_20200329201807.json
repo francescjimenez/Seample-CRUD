@@ -64,5 +64,5 @@
     "pre-commit": "1.2.2",
     "react-app-rewired": "2.1.5",
     "nodemon": "2.0.2"
-  }
+  },
 }
