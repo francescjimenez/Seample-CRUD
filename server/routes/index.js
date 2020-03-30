@@ -11,14 +11,14 @@ const router = express.Router();
 router.get('/ping', (req, res) => res.send('pong'));
 
 /**
- * GET /
- */
-router.use('/', Web);
-
-/**
  * GET /api
  */
 router.use('/api', Api);
+
+/**
+ * GET /
+ */
+router.use('/', Web);
 
 
 module.exports = router;

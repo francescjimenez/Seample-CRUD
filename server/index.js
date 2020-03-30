@@ -5,7 +5,7 @@ const {
 } = require('./config');
 
 const server = require('./server');
-// const database = require('./database');
+const database = require('./database');
 const scheduler = require('./scheduler');
 
 
@@ -14,7 +14,7 @@ const socket = require('./socket');
 global.io = require('socket.io').listen(httpServer);
 socket.init();
 
-// database.connect();
+database.connect();
 
 server.listen(port, () => {
     scheduler();

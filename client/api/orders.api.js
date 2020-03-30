@@ -1,53 +1,8 @@
 const delay = 0;
-const orders = [{
-    id: 1,
-    shippingAddress: "Barcelona, Valencia 135, 3-2",
-    billingAddress: "",
-    status: 1,
-    lines: [
-        {
-            name: 'Product 1',
-            itemSKU: 'KS944RUR',
-            price: 53,
-            quantity: 1
-        },
-        {
-            name: 'Product ',
-            itemSKU: 'KS943RUR',
-            price: 13,
-            quantity: 5
-        },
-        {
-            name: 'Product XX',
-            itemSKU: 'BONOESUR',
-            price: -50,
-            quantity: 1
-        },
-        {
-            name: 'Product asd',
-            itemSKU: 'KC944RUR',
-            price: 15,
-            quantity: 1
-        },
-    ]
-}, {
-    id: 2,
-    shippingAddress: "Product1",
-    billingAddress: "",
-    status: 2,
-    lines: [
-        {
-            name: 'Product asd',
-            itemSKU: 'KS944RUR',
-            price: 50,
-            quantity: 2
-        }
-    ]
-}];
 
+const users = [];
 
-
-class OrdersApi {
+class UsersApi {
     static getorders() {
         return new Promise((resolve) => {
             setTimeout(() => {
@@ -101,4 +56,4 @@ class OrdersApi {
 
 }
 
-export default OrdersApi;
+export default UsersApi;

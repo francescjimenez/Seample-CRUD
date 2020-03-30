@@ -15,7 +15,7 @@ const SelectInput = ({input, name, label, options, onChange}) => (
                 {
                     options.map((option,i) => {
                         if(typeof option === "string"){
-                            return <option key={'_'+i} value={i}>{option}</option>;
+                            return <option key={'_'+i} value={option}>{option}</option>;
                         }else{
                             return <option key={option.value} value={option.value}>{option.text}</option>;
                         }
@@ -26,13 +26,13 @@ const SelectInput = ({input, name, label, options, onChange}) => (
     </div>
 );
 
-// It's deprecated, I know. In my opinion it's better to use a static library like flow or typescript, or we can solve on babel build
+// It's deprecated, I know. In my opinion it's better to use a static library like flow or typescript, or we can remove it on babel build
 SelectInput.propTypes = {
     input: PropTypes.object.isRequired,
     onChange: PropTypes.func.isRequired,
     name: PropTypes.string,
     label: PropTypes.string.isRequired,
-    options: PropTypes.arrayOf(PropTypes.object)
+    options: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default SelectInput;

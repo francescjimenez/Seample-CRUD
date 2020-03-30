@@ -1,16 +1,16 @@
 const express = require('express');
 
-const Orders = require('./orders');
+const Users = require('./users');
 
 const router = express.Router();
 
 router.get('/', (req, res) => res.send({
-    'orders': 'api/orders'
+    'users': 'api/users'
 }));
 
 /**
  * GET /api
  */
-router.use('/orders', Orders);
+router.use('/users', Users);
 
 module.exports = router;
