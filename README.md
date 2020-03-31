@@ -1,6 +1,6 @@
 # Seample CRUD
 
-## How to run in you machine
+## How to run in your machine
 Clone this project in your local machine and:
 - Run `npm install`
 
