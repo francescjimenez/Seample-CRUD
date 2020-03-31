@@ -36,31 +36,23 @@ const handleError = (error) => {
 
 service.interceptors.response.use(handleSuccess, handleError);
 
-const get = (path ) => {
-    return service.get(API_URL + path)
-};
+const get = (path ) => service.get(API_URL + path);
 
-const patch = (path, payload) => {
-    return service.request({
+const patch = (path, payload) => service.request({
         method: 'PATCH',
         url: API_URL + path,
         responseType: 'json',
         data: payload
     });
-};
 
-const post = (path, payload) => {
-    return service.request({
+const post = (path, payload) => service.request({
         method: 'POST',
         url: API_URL + path,
         responseType: 'json',
         data: payload
     });
-};
 
-const remove = (path, id) => {
-    return service.delete(API_URL + path + '/' + id);
-};
+const remove = (path, id) => service.delete(API_URL + path + '/' + id);
 
 
 const ApiService = {
@@ -69,7 +61,5 @@ const ApiService = {
     post,
     remove
 };
-
-
 
 export default ApiService;

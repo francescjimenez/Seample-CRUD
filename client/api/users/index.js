@@ -5,18 +5,9 @@ const getUsers = (id = null) => {
   return ApiService.get(url);
 };
 
-const submitUsers = (user) => {
-  if(user._id){
-    return ApiService.patch(`users/${user._id}`, user);
-  }else{
-    return ApiService.post('users', user);
-  }
-};
+const submitUsers = (user) => (user._id) ? ApiService.patch(`users/${user._id}`, user) : ApiService.post('users', user);
 
-const deleteUsers = (id) => {
-  return ApiService.remove('users', id);
-};
-
+const deleteUsers = (id) => ApiService.remove('users', id);
 
 const ApiUsers = {
   getUsers,

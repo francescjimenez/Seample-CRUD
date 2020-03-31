@@ -1,5 +1,4 @@
 const httpStatus = require('http-status');
-const mongoose = require('mongoose');
 const UserSchema = require('./model');
 
 const LIMIT_DOCUMENTS = 200;

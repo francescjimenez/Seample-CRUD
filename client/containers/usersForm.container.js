@@ -1,7 +1,6 @@
 import React, { useState, useEffect }  from 'react';
 import { ApiUsers } from '../api/';
-import FieldInput from '../components/common/FieldInput';
-import SelectInput from '../components/common/SelectInput';
+import { FieldInput, SelectInput } from '../components/form';
 import Layout from '../components/layout/layout.component';
 import CONSTANTS from '../config/constants';
 import { withRouter } from 'react-router-dom';
@@ -28,7 +27,7 @@ const UsersForm = ({ history, match: { params }}) => {
         }
             
         return () => {
-            // Here it's important to clean the connections to api, to avoid memory leaks. But I am using a timeout as a mackup, I preferred not to dirty the code
+            // Here it is important to clean the connections to api, to avoid memory leaks. I preferred not to dirty the code
             console.log("cleaned up");
         }
     }, [params.id]);

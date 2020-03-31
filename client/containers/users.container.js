@@ -23,9 +23,8 @@ const Users = ({ history }) => {
 
     }, []);
 
-    const capitalizedFormatter = (cell) => {
-        return (cell) ? cell[0].toUpperCase() + cell.slice(1) : '---';
-    };
+    const capitalizedFormatter = (cell) => (cell) ? cell[0].toUpperCase() + cell.slice(1) : '---';
+    
     const actionFormatter = (cell, row) => {
         return (
             <div className="btn-group float-right btn-group-sm" role="group" aria-label="Actions">
@@ -68,7 +67,7 @@ const Users = ({ history }) => {
                 <h1>Users</h1>
                 <BootstrapTable data={users} options={options} condensed hover>
                     <TableHeaderColumn dataField='_id' isKey>User ID</TableHeaderColumn>
-                    <TableHeaderColumn dataField='gender'>Gender</TableHeaderColumn>
+                    <TableHeaderColumn dataField='gender' dataFormat={ capitalizedFormatter }>Gender</TableHeaderColumn>
                     <TableHeaderColumn dataField='first_name' dataFormat={ capitalizedFormatter } dataSort>Name</TableHeaderColumn>
                     <TableHeaderColumn dataField='email'>Email</TableHeaderColumn>
                     <TableHeaderColumn dataField='phone'>Phone</TableHeaderColumn>
@@ -78,6 +77,5 @@ const Users = ({ history }) => {
         </Layout>
     );
 };
-
 
 export default withRouter(Users);

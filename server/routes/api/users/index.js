@@ -7,7 +7,7 @@ const { idValidation, userValidation } = require('./validation');
 const routes = express.Router();
 
 /**
- * GET /users
+ * GET /users & GET /users/:_id
  */
 routes.route('/').get(controller.get);
 routes.route('/:_id').get(validate(idValidation), controller.getOne);
@@ -19,7 +19,7 @@ routes.route('/').post(validate(userValidation), controller.insert);
 
 
 /**
- * PUT /users
+ * PATCH /users/:_id
  */
 routes.route('/:_id').patch(validate(userValidation), controller.edit);
 

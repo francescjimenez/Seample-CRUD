@@ -12,6 +12,7 @@ const SelectInput = ({input, name, label, options, onChange}) => (
                 name={name}
                 className="form-control"
             >
+                <option key={'_not_selected'} value="">Choose an option</option>
                 {
                     options.map((option,i) => {
                         if(typeof option === "string"){

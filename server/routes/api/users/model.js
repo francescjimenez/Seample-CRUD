@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 const roundMinutesHour = (time) => {
     var timeToReturn = new Date(time);
 
@@ -11,7 +10,6 @@ const roundMinutesHour = (time) => {
 
     return timeToReturn.getTime();
 };
-
 
 /**
  * User Schema
